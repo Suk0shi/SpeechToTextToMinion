@@ -1,4 +1,4 @@
-# SpeechToTextToTranslation
+# SpeechToTextToTranslate
 
 This was a trial to play with speech-to-text. The translations use the funtranslations API.
 
