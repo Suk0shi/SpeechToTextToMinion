@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Oswald";
+  src: url(./assets/Oswald-Bold.ttf);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -28,7 +33,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  .discSpin {
     animation: logo-spin infinite 20s linear;
   }
 }
@@ -40,3 +45,115 @@
 .read-the-docs {
   color: #888;
 }
+
+.buttonContainer {
+  grid-row: 2/4;
+  position: relative;
+  display: inline-block;
+}
+
+.recordButton {
+  background-color: white;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+.recordButton:focus {
+  outline: none;
+}
+
+.recordButton img {
+  height: 400px;
+  border-radius: 20px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
+
+.translator {
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+  column-gap: 140px;
+  row-gap: 30px;
+  background-color: rgb(57, 60, 149);
+  background-color: #e6e4d5;
+  border: solid;
+  border-width: 10px;
+  border-color: #000000;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.translator h1 {
+  font-family: "Oswald", monospace;
+  font-size: 90px;
+  text-align: start;
+  position: absolute;
+}
+
+.characterPortrait {
+  display: grid;
+  grid-template-rows: 1fr 0fr;
+  height: 300px;
+  width: 225px;
+  background-color: #dad5c0;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 20px;
+  border-top-left-radius: 60px;
+  justify-self: end;
+}
+
+.portraitImg {
+  justify-self: center;
+  align-self: end;
+  max-width: 100%;
+  max-height: 220px;
+}
+
+.dropdown {
+  width: 100%;
+  align-self: end;
+  padding: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+
+.inputBox,
+.outputBox {
+  text-align: start;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.inputBox p,
+.outputBox p {
+  margin: 0;
+}
+
+.recordingDisc {
+  position: absolute;
+  bottom: 50px;
+  left: 0px;
+}
+
+.recordingLight {
+  background-color: rgba(213, 0, 0, 0.767);
+  box-shadow: 0px 0px 20px 10px rgba(255, 0, 0, 0.627);
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  border-radius: 20px;
+  bottom: 153px;
+  left: 111px;
+}
+
