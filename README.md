@@ -1,6 +1,6 @@
-# SpeechToTextToMinion
+# SpeechToTextToTranslation
 
-This was a trial to play with speech-to-text. The minion translation uses the funtranslations API.
+This was a trial to play with speech-to-text. The translations use the funtranslations API.
 
 See live here: https://speechtotexttranslator.netlify.app/
 
