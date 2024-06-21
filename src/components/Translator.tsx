@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from 'react'
+import recordingDeviceImg from '../assets/recordingDevice.jpg'
 
 function Translator() {
     const recognitionRef = useRef<SpeechRecognition>();
@@ -48,7 +49,7 @@ function Translator() {
         </div>
         <div className='buttonContainer'>
             <button className='recordButton' onClick={ handleOnRecord }>
-                <img className='recordingDevice' src="/src/assets/recordingDevice.jpg" alt="Recording Device" />
+                <img className='recordingDevice' src={recordingDeviceImg} alt="Recording Device" />
                 { isActive ?  
                 <>
                 <img className='recordingDisc discSpin' src="/src/assets/recordingDisc.png" alt="Recording Device" />
