@@ -2,6 +2,12 @@
 
 import { useState, useRef } from 'react'
 import recordingDeviceImg from '../assets/recordingDevice.jpg'
+import recordingDisc from '../assets/recordingDisc.png'
+import tapePlayerSound from '../assets/tapePlayerSound.mp3'
+import grootImg from '../assets/groot.png'
+import minionImg from '../assets/minion.png'
+import morseImg from '../assets/morse.png'
+import yodaImg from '../assets/yoda.png'
 
 function Translator() {
     const recognitionRef = useRef<SpeechRecognition>();
@@ -39,7 +45,7 @@ function Translator() {
         <h1>SPEECH TO TEXT <br></br>TRANSLATOR</h1>
         <div></div>
         <div className='characterPortrait'>
-            <img className='portraitImg' src={`/src/assets/${translation}.png`} alt={`Image representing ${translation} language`} />
+            <img className='portraitImg' src={translation === "minion" ? minionImg : translation === "groot" ? grootImg : translation === "morse" ? morseImg : translation === "yoda" ? yodaImg : undefined} alt={`Image representing ${translation} language`} />
             <select className='dropdown' name="Translations" id="translations" defaultValue={"minion"} onChange={(e)=> setTranslation(e.target.value)}>
                 <option value="groot">Groot</option>
                 <option value="minion">Minion</option>
@@ -52,13 +58,13 @@ function Translator() {
                 <img className='recordingDevice' src={recordingDeviceImg} alt="Recording Device" />
                 { isActive ?  
                 <>
-                <img className='recordingDisc discSpin' src="/src/assets/recordingDisc.png" alt="Recording Device" />
+                <img className='recordingDisc discSpin' src={recordingDisc} alt="Recording Device" />
                 <div className='recordingLight'></div>
-                <audio autoPlay src="/src/assets/tapePlayerSound.mp3"></audio>
+                <audio autoPlay src={tapePlayerSound}></audio>
                 </>
                 :
                 <>
-                <img className='recordingDisc' src="/src/assets/recordingDisc.png" alt="Recording Device" />
+                <img className='recordingDisc' src={recordingDisc} alt="Recording Device" />
                 </>
                 }
             </button>
